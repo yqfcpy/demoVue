@@ -1,0 +1,10 @@
+{
+  "global":{
+    "language":"Español"
+  },
+  "home": {
+    "hello": "Hola",
+    "user" : "Usuario",
+    "message":"Bienveido a mi paginaweb"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "global":{
+    "language":"English"
+  },
+  "home": {
+    "hello": "Hello",
+    "user" : "user",
+    "message":"Welcome to my home page"
+  }
+}

@@ -1,0 +1,49 @@
+/* 引入其他的scss */
+@import "./normalize.scss";
+/* 获取根元素 html样式*/
+
+/* 声明几个变量 */
+// 文字颜色
+$color-text:#666;
+// 高亮颜色
+$color-highText:#ff5777;
+// 选中的背景颜色
+$color-tint:#ff8198;
+// 背景颜色
+$color-background:#fff;
+// 字体大小
+$font-size:14px;
+// 行高
+$line-height:1.5;
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none;// 禁止用户对文字 点来点去
+  -webkit-tap-highlight-color: transparent;
+  background: $color-background;
+  color: $color-text;
+  // rem vw/vh
+  width: 100vw;
+}
+a{
+  color: $color-text;
+  text-decoration: none;
+}
+.clear-fix::after{
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.clear-fix{
+  zoom: 1;
+}
