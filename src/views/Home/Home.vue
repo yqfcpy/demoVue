@@ -1,10 +1,10 @@
 <template>
   <div>
     <el-row>
-      <el-button @click="changeLanguageEn" type="primary">English</el-button>
-      <el-button @click="changeLanguageZh" type="primary">中文简体</el-button>
-      <el-button @click="changeLanguageEs" type="primary">Español</el-button>
-      <el-button @click="changeLanguage"><p>{{$t("global.language")}}</p></el-button>
+      <el-button @click="changeLangEn" type="primary">English</el-button>
+      <el-button @click="changeLangZh" type="primary">中文简体</el-button>
+      <el-button @click="changeLangEs" type="primary">Español</el-button>
+      <el-button @click="changeLang"><p>{{$t("global.language")}}</p></el-button>
     </el-row>
     <h1>{{$t("home.hello")}}</h1>
     <h1>{{message}}</h1>
@@ -27,7 +27,7 @@ export default {
     updateData () {
       this.message = window.i18n.t('home.message')
     },
-    changeLanguage () {
+    changeLang () {
       if (this.$i18n.locale === 'en') {
         setup('zh')
       } else {
@@ -35,31 +35,31 @@ export default {
       }
       // 把当前语言保存起来 下次进入页面还是这个语言
       LangStorage.setLang(this.$i18n.locale)
-      this.updateData()
+      // this.updateData()
     },
     // 设置成英文
-    changeLanguageEn () {
+    changeLangEn () {
       if (this.$i18n.locale !== 'en') {
         setup('en')
       }
       LangStorage.setLang(this.$i18n.locale)
-      this.updateData()
+      // this.updateData()
     },
     // 设置成中文
-    changeLanguageZh () {
+    changeLangZh () {
       if (this.$i18n.locale !== 'zh') {
         setup('zh')
       }
       LangStorage.setLang(this.$i18n.locale)
-      this.updateData()
+      // this.updateData()
     },
     // 设置成西班牙文
-    changeLanguageEs () {
+    changeLangEs () {
       if (this.$i18n.locale !== 'es') {
         setup('es')
       }
       LangStorage.setLang(this.$i18n.locale)
-      this.updateData()
+      // this.updateData()
     }
   }
 }
