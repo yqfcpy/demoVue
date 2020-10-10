@@ -35,7 +35,7 @@ export default {
       }
       // 把当前语言保存起来 下次进入页面还是这个语言
       LangStorage.setLang(this.$i18n.locale)
-      // this.updateData()
+      this.updateData()
     },
     // 设置成英文
     changeLangEn () {
@@ -43,7 +43,7 @@ export default {
         setup('en')
       }
       LangStorage.setLang(this.$i18n.locale)
-      // this.updateData()
+      this.updateData()
     },
     // 设置成中文
     changeLangZh () {
@@ -51,7 +51,7 @@ export default {
         setup('zh')
       }
       LangStorage.setLang(this.$i18n.locale)
-      // this.updateData()
+      this.updateData()
     },
     // 设置成西班牙文
     changeLangEs () {
@@ -59,7 +59,7 @@ export default {
         setup('es')
       }
       LangStorage.setLang(this.$i18n.locale)
-      // this.updateData()
+      this.updateData()
     }
   }
 }
